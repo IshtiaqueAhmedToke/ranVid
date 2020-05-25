@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var videos = ["https://youtu.be/W4-zBO9Ulpo?t=199", "https://youtu.be/hc6Jom2xjtM?t=102","https://youtu.be/W4-zBO9Ulpo?t=290","https://youtu.be/W4-zBO9Ulpo?t=153","https://youtu.be/kkrrl5LG_pM?t=55","https://youtu.be/kkrrl5LG_pM?t=335","https://youtu.be/kkrrl5LG_pM?t=443","https://youtu.be/kkrrl5LG_pM?t=466","https://youtu.be/kkrrl5LG_pM?t=545","https://youtu.be/kkrrl5LG_pM?t=566","https://youtu.be/kkrrl5LG_pM?t=640"];
+        window.onload = function () {
+            var playerDiv = document.getElementById("random_player");
+            var player = document.createElement("IFRAME");
+            
+            var randomVideoUrl = videos[Math.floor(Math.random() * videos.length)];
+           
+            
+            player.setAttribute('width', '1920');
+            player.setAttribute('height', '1080');
+            
+            player.setAttribute('src', randomVideoUrl);
+
+            playerDiv.appendChild(player);
+            window.open(randomVideoUrl);  
+
+        };
+    </script>
+</head>
+
+<body>
+    <div id="random_player" />
+</body>
+
+</html>
